@@ -4,7 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Veranstaltungen</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        aside {
+            background-color: #333;
+            color: #fff;
+            width: 200px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #66c2ff;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        h2, p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #004080;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,7 +87,9 @@
   <main>
     <div id="minecraft" class="content active">
       <h2>Minecraft Veranstaltungen</h2>
-      <p>Erkunden Sie aufregende Minecraft-Events!</p>
+      <p>
+        Erleben Sie aufregende Minecraft-Events und tauchen Sie ein in die faszinierende Welt des kreativen Bauens und der Abenteuer!
+      </p>
     </div>
   </main>
 
@@ -44,4 +111,3 @@
 
 </body>
 </html>
-
