@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Veranstaltungen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <aside>
+    <nav>
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="cs2.html">CS2</a></li>
+        <!-- Add other section links here -->
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <div id="cs2" class="content active">
+      <h2>CS2 Veranstaltungen</h2>
+      <p>Bleiben Sie dran für kommende CS2-Events!</p>
+      <a href="https://www.twitch.tv/streamingeventskzn" target="_blank">CS2 auf Twitch ansehen</a>
+    </div>
+  </main>
+
+  <script>
+    function showContent(id) {
+      var contents = document.querySelectorAll('.content');
+      contents.forEach(function (content) {
+        content.classList.remove('active');
+      });
+
+      var selectedContent = document.getElementById(id);
+      selectedContent.classList.add('active');
+    }
+
+    window.onload = function () {
+      showContent('cs2');
+    };
+  </script>
+
+</body>
+</html>
 
