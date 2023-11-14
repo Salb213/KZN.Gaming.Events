@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung - Kzn Veranstaltungen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <aside>
+    <nav>
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="Cs2.html">CS2</a></li>
+        <li><a href="Minecraft.html">Minecraft</a></li>
+        <li><a href="Registration.html">Registrierung</a></li>
+        <!-- Add other section links here -->
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <div id="registration" class="content active">
+      <h2>Registrierung für Kzn Veranstaltungen</h2>
+      <p>Füllen Sie das Formular aus, um sich zu registrieren:</p>
+      <a href="https://forms.gle/i1f22nz7EyjMQ89C8" target="_blank">Registrierungsformular</a>
+    </div>
+  </main>
+
+  <script>
+    function showContent(id) {
+      var contents = document.querySelectorAll('.content');
+      contents.forEach(function (content) {
+        content.classList.remove('active');
+      });
+
+      var selectedContent = document.getElementById(id);
+      selectedContent.classList.add('active');
+    }
+
+    window.onload = function () {
+      showContent('registration');
+    };
+  </script>
+
+</body>
+</html>
 
