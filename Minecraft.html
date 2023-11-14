@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Veranstaltungen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <aside>
+    <nav>
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="cs2.html">CS2</a></li>
+        <li><a href="minecraft.html">Minecraft</a></li>
+        <!-- Add other section links here -->
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <div id="minecraft" class="content active">
+      <h2>Minecraft Veranstaltungen</h2>
+      <p>Erkunden Sie aufregende Minecraft-Events!</p>
+    </div>
+  </main>
+
+  <script>
+    function showContent(id) {
+      var contents = document.querySelectorAll('.content');
+      contents.forEach(function (content) {
+        content.classList.remove('active');
+      });
+
+      var selectedContent = document.getElementById(id);
+      selectedContent.classList.add('active');
+    }
+
+    window.onload = function () {
+      showContent('minecraft');
+    };
+  </script>
+
+</body>
+</html>
 
