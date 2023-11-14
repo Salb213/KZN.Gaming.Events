@@ -4,103 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kzn Veranstaltungen</title>
-    <style>
-        body {
-            display: flex;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        aside {
-            background-color: #333;
-            color: #fff;
-            width: 200px;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav li {
-            margin-bottom: 10px;
-        }
-
-        main {
-            flex: 1;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .content {
-            display: none;
-        }
-
-        .active {
-            display: block;
-        }
-
-        h1, h2, p {
-            margin-bottom: 15px;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        #registration-form {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        #registration-form label {
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        #registration-form input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            box-sizing: border-box;
-        }
-
-        #registration-form button {
-            background-color: #0066cc;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        #registration-form button:hover {
-            background-color: #0052a3;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <aside>
     <nav>
       <ul>
-        <li><a href="#home" onclick="showContent('home')">Startseite</a></li>
-        <li><a href="#cs2" onclick="showContent('cs2')">CS2</a></li>
-        <li><a href="#minecraft" onclick="showContent('minecraft')">Minecraft</a></li>
-        <li><a href="#contact" onclick="showContent('contact')">Kontakt</a></li>
-        <li><a href="#registration" onclick="showContent('registration')">Registrierung</a></li>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="cs2.html">CS2</a></li>
+        <li><a href="minecraft.html">Minecraft</a></li>
+        <!-- Add other section links here -->
       </ul>
     </nav>
   </aside>
@@ -109,42 +23,6 @@
     <div id="home" class="content active">
       <h1>Willkommen bei Kzn Veranstaltungen</h1>
       <p>Ihre Quelle für aufregende Gaming-Events!</p>
-    </div>
-
-    <div id="cs2" class="content">
-      <h2>CS2 Veranstaltungen</h2>
-      <p>Bleiben Sie dran für kommende CS2-Events!</p>
-      <a href="https://www.twitch.tv/streamingeventskzn" target="_blank">CS2 auf Twitch ansehen</a>
-    </div>
-
-    <div id="minecraft" class="content">
-      <h2>Minecraft Veranstaltungen</h2>
-      <p>Erkunden Sie aufregende Minecraft-Events!</p>
-    </div>
-
-    <div id="contact" class="content">
-      <h2>Kontakt</h2>
-      <p>Haben Sie Fragen oder Vorschläge? Kontaktieren Sie uns:</p>
-      <p>Email: <a href="mailto:salb213is.on@gmail.com">salb213is.on@gmail.com</a></p>
-      <p>Discord: salb213</p>
-    </div>
-
-    <div id="registration" class="content">
-      <h2>Registrierung</h2>
-      <div id="registration-form">
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSe6zV0y15Wu9BW0dHN-fNeb1sgqggYBb2KzNTZXANpLk87iyg/viewform" method="GET" target="_blank">
-          <label for="username">Benutzername:</label>
-          <input type="text" id="username" name="entry.1234567890" required>
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="entry.987654321" required>
-
-          <label for="password">Passwort:</label>
-          <input type="password" id="password" name="entry.567890123" required>
-
-          <button type="submit">Registrieren</button>
-        </form>
-      </div>
     </div>
   </main>
 
