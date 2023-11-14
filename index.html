@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kzn Events</title>
+    <title>Kzn Veranstaltungen</title>
     <!-- Add your CSS styles here if needed -->
     <style>
         body {
@@ -57,6 +57,39 @@
         a:hover {
             text-decoration: underline;
         }
+
+        #registration-form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #registration-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        #registration-form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        #registration-form button {
+            background-color: #0066cc;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #registration-form button:hover {
+            background-color: #0052a3;
+        }
     </style>
 </head>
 <body>
@@ -64,37 +97,57 @@
   <aside>
     <nav>
       <ul>
-        <li><a href="#home" onclick="showContent('home')">Home</a></li>
+        <li><a href="#home" onclick="showContent('home')">Startseite</a></li>
         <li><a href="#cs2" onclick="showContent('cs2')">CS2</a></li>
         <li><a href="#minecraft" onclick="showContent('minecraft')">Minecraft</a></li>
-        <li><a href="#contact" onclick="showContent('contact')">Contact Us</a></li>
+        <li><a href="#contact" onclick="showContent('contact')">Kontakt</a></li>
+        <li><a href="#registration" onclick="showContent('registration')">Registrierung</a></li>
       </ul>
     </nav>
   </aside>
 
   <main>
     <div id="home" class="content active">
-      <h1>Welcome to Kzn Events</h1>
-      <p>Your source for exciting gaming events!</p>
+      <h1>Willkommen bei Kzn Veranstaltungen</h1>
+      <p>Ihre Quelle für aufregende Gaming-Events!</p>
     </div>
 
     <div id="cs2" class="content">
       <!-- CS2 events content goes here -->
-      <h2>CS2 Events</h2>
-      <p>Stay tuned for upcoming CS2 events!</p>
-      <a href="https://www.twitch.tv/streamingeventskzn" target="_blank">Watch CS2 on Twitch</a>
+      <h2>CS2 Veranstaltungen</h2>
+      <p>Bleiben Sie dran für kommende CS2-Events!</p>
+      <a href="https://www.twitch.tv/streamingeventskzn" target="_blank">CS2 auf Twitch ansehen</a>
     </div>
 
     <div id="minecraft" class="content">
       <!-- Minecraft events content goes here -->
-      <h2>Minecraft Events</h2>
-      <p>Explore exciting Minecraft events!</p>
+      <h2>Minecraft Veranstaltungen</h2>
+      <p>Erkunden Sie aufregende Minecraft-Events!</p>
     </div>
 
     <div id="contact" class="content">
       <!-- Contact Us content goes here -->
-      <h2>Contact Us</h2>
-      <p>Have questions or suggestions? Fill out our <a href="https://forms.gle/YQbAyQ4ZNtLoZ97j7" target="_blank">Google Form</a>.</p>
+      <h2>Kontakt</h2>
+      <p>Haben Sie Fragen oder Vorschläge? Kontaktieren Sie uns:</p>
+      <p>Email: <a href="mailto:salb213is.on@gmail.com">salb213is.on@gmail.com</a></p>
+      <p>Discord: salb213</p>
+    </div>
+
+    <div id="registration" class="content">
+      <!-- Registration form goes here -->
+      <h2>Registrierung</h2>
+      <div id="registration-form">
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Passwort:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Registrieren</button>
+      </div>
     </div>
   </main>
 
