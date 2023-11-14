@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kzn Veranstaltungen</title>
-    <!-- Add your CSS styles here if needed -->
     <style>
         body {
             display: flex;
@@ -113,20 +112,17 @@
     </div>
 
     <div id="cs2" class="content">
-      <!-- CS2 events content goes here -->
       <h2>CS2 Veranstaltungen</h2>
       <p>Bleiben Sie dran für kommende CS2-Events!</p>
       <a href="https://www.twitch.tv/streamingeventskzn" target="_blank">CS2 auf Twitch ansehen</a>
     </div>
 
     <div id="minecraft" class="content">
-      <!-- Minecraft events content goes here -->
       <h2>Minecraft Veranstaltungen</h2>
       <p>Erkunden Sie aufregende Minecraft-Events!</p>
     </div>
 
     <div id="contact" class="content">
-      <!-- Contact Us content goes here -->
       <h2>Kontakt</h2>
       <p>Haben Sie Fragen oder Vorschläge? Kontaktieren Sie uns:</p>
       <p>Email: <a href="mailto:salb213is.on@gmail.com">salb213is.on@gmail.com</a></p>
@@ -134,37 +130,35 @@
     </div>
 
     <div id="registration" class="content">
-      <!-- Registration form goes here -->
       <h2>Registrierung</h2>
       <div id="registration-form">
-        <label for="username">Benutzername:</label>
-        <input type="text" id="username" name="username" required>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSe6zV0y15Wu9BW0dHN-fNeb1sgqggYBb2KzNTZXANpLk87iyg/viewform" method="GET" target="_blank">
+          <label for="username">Benutzername:</label>
+          <input type="text" id="username" name="entry.1234567890" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="entry.987654321" required>
 
-        <label for="password">Passwort:</label>
-        <input type="password" id="password" name="password" required>
+          <label for="password">Passwort:</label>
+          <input type="password" id="password" name="entry.567890123" required>
 
-        <button type="submit">Registrieren</button>
+          <button type="submit">Registrieren</button>
+        </form>
       </div>
     </div>
   </main>
 
   <script>
     function showContent(id) {
-      // Hide all content divs
       var contents = document.querySelectorAll('.content');
       contents.forEach(function (content) {
         content.classList.remove('active');
       });
 
-      // Show the selected content
       var selectedContent = document.getElementById(id);
       selectedContent.classList.add('active');
     }
 
-    // Redirect to Home on page load
     window.onload = function () {
       showContent('home');
     };
