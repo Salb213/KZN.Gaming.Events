@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +25,14 @@
             display: inline;
             margin-right: 10px;
         }
+
+        .content {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -35,31 +44,71 @@
 
   <nav>
     <ul>
-      <li><a href="#cs2">CS2</a></li>
-      <li><a href="#minecraft">Minecraft</a></li>
-      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#home" onclick="showContent('home')">Home</a></li>
+      <li><a href="#cs2" onclick="showContent('cs2')">CS2</a></li>
+      <li><a href="#minecraft" onclick="showContent('minecraft')">Minecraft</a></li>
+      <li><a href="#fortnite" onclick="showContent('fortnite')">Fortnite</a></li>
+      <li><a href="#other" onclick="showContent('other')">Other</a></li>
+      <li><a href="#contact" onclick="showContent('contact')">Contact Us</a></li>
     </ul>
   </nav>
 
-  <section id="cs2">
+  <div id="home" class="content active">
+    <h2>Welcome to Kzn Events</h2>
+    <p>Your source for exciting gaming events!</p>
+  </div>
+
+  <div id="cs2" class="content">
+    <!-- CS2 events content goes here -->
     <h2>CS2 Events</h2>
-    <!-- Add your CS2 event details here -->
+    <p>Stay tuned for upcoming CS2 events!</p>
     <a href="https://www.twitch.tv/streamingeventskzn" target="_blank">Watch CS2 on Twitch</a>
-  </section>
+  </div>
 
-  <section id="minecraft">
+  <div id="minecraft" class="content">
+    <!-- Minecraft events content goes here -->
     <h2>Minecraft Events</h2>
-    <!-- Add your Minecraft event details here -->
-    <a href="https://www.twitch.tv/streamingeventskzn" target="_blank">Watch Minecraft on Twitch</a>
-  </section>
+    <p>Explore exciting Minecraft events!</p>
+  </div>
 
-  <section id="contact">
-    <h2>Event Registration</h2>
-    <!-- Add your registration form link here -->
-    <p>Register for our events through our <a href="https://forms.gle/YQbAyQ4ZNtLoZ97j7" target="_blank">Google Form</a>.</p>
-  </section>
+  <div id="fortnite" class="content">
+    <!-- Fortnite events content goes here -->
+    <h2>Fortnite Events</h2>
+    <p>Join us for thrilling Fortnite events!</p>
+  </div>
+
+  <div id="other" class="content">
+    <!-- Other events content goes here -->
+    <h2>Other Events</h2>
+    <p>Discover a variety of gaming events!</p>
+  </div>
+
+  <div id="contact" class="content">
+    <!-- Contact Us content goes here -->
+    <h2>Contact Us</h2>
+    <p>Have questions or suggestions? Fill out our <a href="https://forms.gle/YQbAyQ4ZNtLoZ97j7" target="_blank">Google Form</a>.</p>
+  </div>
 
   <!-- Add your footer here -->
+
+  <script>
+    function showContent(id) {
+        // Hide all content divs
+        var contents = document.querySelectorAll('.content');
+        contents.forEach(function(content) {
+            content.classList.remove('active');
+        });
+
+        // Show the selected content
+        var selectedContent = document.getElementById(id);
+        selectedContent.classList.add('active');
+    }
+
+    // Redirect to CS2 on page load
+    window.onload = function() {
+        showContent('cs2');
+    };
+  </script>
 
 </body>
 </html>
